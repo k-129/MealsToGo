@@ -14,11 +14,11 @@ const isAndroid = Platform.OS === "android";
 export default function App() {
   return (
     <>
-      <SafeAreaView style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
-        <View style={{ padding: 10, backgroundColor: "green" }}>
+      <SafeAreaView style={styles.container}>
+        <View style={styles.search}>
           <Text>Search</Text>
         </View>
-        <View style={{ flex: 1, padding: 10, backgroundColor: "blue" }}>
+        <View style={styles.list}>
           <Text>List</Text>
         </View>
       </SafeAreaView>
@@ -27,4 +27,18 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginTop: StatusBar.currentHeight,
+  },
+  search: {
+    padding: 10,
+    backgroundColor: "green",
+  },
+  list: {
+    flex: 1,
+    padding: 10,
+    backgroundColor: "blue",
+  },
+});
