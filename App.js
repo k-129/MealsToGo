@@ -1,6 +1,13 @@
 import React from "react";
-import { StatusBar as ExpoStatusBar} from "expo-status-bar";
-import { StyleSheet, Text, View, SafeAreaView, Platform, StatusBar } from "react-native";
+import { StatusBar as ExpoStatusBar } from "expo-status-bar";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  Platform,
+  StatusBar,
+} from "react-native";
 
 const isAndroid = Platform.OS === "android";
 
