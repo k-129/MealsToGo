@@ -6,10 +6,17 @@ import { Text } from "../../../components/typography/text.component";
 import star from "../../../../assets/star";
 import open from "../../../../assets/open";
 
-import {Icon, RestaurantCard, RestaurantCardCover, Address, Info, Rating, Section, SectionEnd, Open} from './restaurant-info-card.styles'
-
-
-
+import {
+  Icon,
+  RestaurantCard,
+  RestaurantCardCover,
+  Address,
+  Info,
+  Rating,
+  Section,
+  SectionEnd,
+  Open,
+} from "./restaurant-info-card.styles";
 
 export const RestaurantInfoCard = ({ restaurant = {} }) => {
   const {
