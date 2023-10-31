@@ -17,10 +17,10 @@ import { Ionicons } from "@expo/vector-icons";
 const Tab = createBottomTabNavigator();
 
 const TAB_ICON = {
-  Restaurants: 'md-restaurant',
-  Map: 'md-map',
-  Settings: 'md-settings'
-}
+  Restaurants: "md-restaurant",
+  Map: "md-map",
+  Settings: "md-settings",
+};
 
 const Settings = () => (
   <SafeArea>
@@ -33,17 +33,14 @@ const Map = () => (
   </SafeArea>
 );
 
-const tabBarIcon = ({size, color}) => <Ionicons name={iconName} size={size} color={color} />;
-
-const screenOptions= ({route}) =>{
+const screenOptions = ({ route }) => {
   const iconName = TAB_ICON[route.name];
   return {
-    tabBarIcon: ({size, color}) => (
+    tabBarIcon: ({ size, color }) => (
       <Ionicons name={iconName} size={size} color={color} />
-    )
-  }
-}
-
+    ),
+  };
+};
 
 export default function App() {
   const [oswaldLoaded] = useOswald({
@@ -62,7 +59,11 @@ export default function App() {
       <ThemeProvider theme={theme}>
         <NavigationContainer>
           <Tab.Navigator
-            screenOptions={screenOptions}>
+            screenOptions={screenOptions}
+            tabBarOptions={{
+              activeTintColor: "tomato",
+              inactiveTintColor: "gray",
+            }}>
             <Tab.Screen name="Restaurants" component={RestaurantsScreen} />
             <Tab.Screen name="Map" component={Map} />
             <Tab.Screen name="Settings" component={Settings} />
